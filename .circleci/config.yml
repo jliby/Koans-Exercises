@@ -9,15 +9,16 @@ jobs:
       - image: cimg/base:2022.03 
 
     steps:
-      
+      - run: mkdir ~/test-results
+
       - build-tools/test-results:
           data-dir: ~/project/results
           upload: true
       - store_artifacts:
           path: ~/project/results/jest/junit.xml
-          destination: ~/project/test-results
+          destination: ~/test-results
       - store_test_results:
-           path: ~/project/test-results
+           path: ~/test-results
       - run: cd ~; cd bin
 
 # Add below this line, do not modify above
