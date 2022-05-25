@@ -14,7 +14,7 @@ jobs:
           data-dir: ~/project/results
           upload: true
       - store_test_results:
-           path: ~/project/results/jest/junit.xml
+           path: ~~/project/results/python/junit.xml
 # Add below this line, do not modify above
 
 # Add above this line, do not modify below
