@@ -10,9 +10,9 @@ jobs:
 
     steps:
       
-      # - build-tools/test-results:
-      #     data-dir: ~/project/results
-      #     upload: true
+      - build-tools/test-results:
+          data-dir: ~/project/results
+          upload: true
       - store_test_results:
            path: ~/project/results
 # Add below this line, do not modify above
