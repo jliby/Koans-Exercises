@@ -19,7 +19,7 @@ jobs:
       - store_test_results:
            path: test-results
       - run:
-          ls
+          cd results; ls
 # Add below this line, do not modify above
 
 # Add above this line, do not modify below
