@@ -17,10 +17,8 @@ jobs:
           path: ~/project/results/jest/junit.xml
           destination: ~/project/test-results
       - store_test_results:
-           path: test-results
+           path: ~/project/test-results
       - run: cd ~; cd bin
-      - run:
-          cd ~; ls; cd ..; ls; cd ..; ls; cd bin; ls
 
 # Add below this line, do not modify above
 
