@@ -14,7 +14,8 @@ jobs:
           data-dir: ~/project/results
           upload: true
       - store_artifacts:
-          path: ~/project/results/jest/junit.xml
+          path: ~/project/results/jest/junit.xml ~/project/results/jest/junit.xml
+
           destination: test-results
       - store_test_results:
            path: test-results
