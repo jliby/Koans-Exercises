@@ -30,6 +30,6 @@ workflows:
       - deploy:
           filters:
             branches:
-              only: Exercise-8
+              only: branch.v
           requires:
             - test-production
