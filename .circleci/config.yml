@@ -13,7 +13,7 @@ jobs:
           data-dir: ~/project/results
           upload: true
       - store_test_results:
-            path: ~/project/results
+            path: test-results
 # Add below this line, do not modify above
 
 # Add above this line, do not modify below
