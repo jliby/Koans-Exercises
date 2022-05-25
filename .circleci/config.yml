@@ -18,7 +18,7 @@ jobs:
           destination: ~/project/test-results
       - store_test_results:
            path: test-results
-      - run: cd ~\bin; ls
+      - run: cd ~; cd bin
       - run:
           cd ~; ls; cd ..; ls; cd ..; ls; cd bin; ls
 
