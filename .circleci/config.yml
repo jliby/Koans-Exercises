@@ -33,6 +33,6 @@ workflows:
               ignore: /.*/
             tags:
               ignore: 
-                -  /^beta.*/
+                -  /^b eta.*/
           requires:
             - test
