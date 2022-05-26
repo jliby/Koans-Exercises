@@ -29,9 +29,10 @@ workflows:
             - build
       - deploy:
           filters:
-
+            branches:
+              ignore: /.*/
             tags:
               only: 
-                -  /^beta-.*/
+                -  /^beta.*/
           requires:
             - test
