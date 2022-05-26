@@ -29,9 +29,9 @@ workflows:
             - build
       - deploy:
           filters:
-          
+
             tags:
               ignore: 
-                -  /^beta.*/
+                -  /^alpha.*/
           requires:
             - test
