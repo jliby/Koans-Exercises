@@ -14,7 +14,7 @@ jobs:
       - run:
           name: Install Dependencies
           command: yarn install --immutable
-      - run: cd ..; pwd; ls
+      - run: ls
       # Uncomment below and set the key to point to the proper file
       - save_cache:
           name: Save Yarn Package Json Cache
