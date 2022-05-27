@@ -12,8 +12,10 @@ jobs:
         - run: cd ~/project/app && pwd && ls
           # Edit below here
         - persist_to_workspace: 
-            root: 
-            paths:
+            root: workspace
+            paths: 
+              - echo-output
+
 
   build-windows:
     docker:
@@ -26,9 +28,9 @@ jobs:
         - run: cd ~/project/app && pwd && ls
           # Edit below here
         - persist_to_workspace: 
-            root: 
+            root: workspace
             paths:
-
+              - echo-output
   build-mac:
       docker:
         - image: cimg/base:2022.03 # use your imagination, using all linux/docker for ease-of-use
@@ -40,8 +42,9 @@ jobs:
         - run: cd ~/project/app && pwd && ls
           # Edit below here
         - persist_to_workspace: 
-            root:
+            root: workspace
             paths:
+              - echo-outputs
 
   deploy:
       docker:
