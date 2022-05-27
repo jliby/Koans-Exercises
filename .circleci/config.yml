@@ -10,12 +10,12 @@ jobs:
             name: Generate app
             command: echo app >> app/linux/app.linux
         - run: cd ~/project/app && pwd && ls
+        - run: ls;
           # Edit below here
         - persist_to_workspace: 
             root: app
             paths:
-              - echo-output
-
+              - .
   build-windows:
     docker:
       - image: cimg/base:2022.03 # use your imagination, using all linux/docker for ease-of-use
