@@ -15,7 +15,7 @@ jobs:
           condition:
             # Add condition to execute this step when the github branch is equal to 'main'
             and:
-            - equal: [main, << pipeline.git.branch >>]
+            - equal: [Exercise-14, << pipeline.git.branch >>]
           steps:
             - run: echo "I am on main"
 
