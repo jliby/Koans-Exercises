@@ -13,7 +13,7 @@ jobs:
         - run: ls;
           # Edit below here
         - persist_to_workspace: 
-            root: app
+            root: app/linux
             paths:
               - .
   build-windows:
@@ -44,7 +44,7 @@ jobs:
         - persist_to_workspace: 
             root: app/windows
             paths: 
-              - echo-output
+              - .
 
   deploy:
       docker:
