@@ -17,7 +17,7 @@ jobs:
             and:
             - equal: [Exercise-14, << pipeline.git.branch >>]
           steps:
-            - run: echo "I am on main"
+            - run: echo "I am on Exercise-14"
 
   conditional-job:
     docker:
