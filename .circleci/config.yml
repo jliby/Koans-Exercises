@@ -34,7 +34,7 @@ workflows:
   conditional-workflow:
     when:
       and:
-        - equal: [true, conditional-workflow:]
+        - equal: [true, conditional-workflow]
         # Add condition to execute this workflow when condition-workflow is equal to true
     jobs:
       - conditional-job
