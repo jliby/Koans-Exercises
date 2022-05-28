@@ -24,8 +24,8 @@ We have a `api-job` job in our Workflow. We have decided we only ever want to ru
 
     ```shell
     curl --request POST \
-    --url https://circleci.com/api/v2/project/github/[ORG]/[PROJECT]/pipeline \
-    --header 'authorization: Basic [BASE64_PERSONAL_API_TOKEN]' \
+    --url https://circleci.com/api/v2/project/gh/jliby/Koans-Exercises \
+    --header 'authorization: Basic [NDY5MWNiYjg4OTQyYWRiODVmYTRkZWZlZmI5YjhhMDIwOWNjMzY2NA==]' \
     --header 'content-type: application/json' \
     --data '[JSON_DATA]'
     ```
