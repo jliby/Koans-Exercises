@@ -1,31 +1,39 @@
 version: 2.1
 
-parameters:
-  run_by_api:
-    type: boolean
-    default: false
+commands:
+  generatelogs:
+    description: "A command to generate a log file"
+    parameters:
+      path:
+        type: string
+        default: "~/randomfolder"
+    steps:
+      - run: echo "Log file" > <<parameters.path>>/log.txt
+  endMission:
+    description: "Use the parameters of this command to exit this mission with a green build."
+    parameters:
+      exitCode:
+        type: integer
+        default: 1
+    steps:
+      - run: exit <<parameters.exitCode>>
 
 jobs:
-  regular:
-    docker:
-      - image: cimg/base:2022.03
+  build:
+    executor: custom-node
     steps:
-      - checkout
-      - run: echo "I was run normally"
-
-  api-job:
-    docker:
-      - image: cimg/base:2022.03
-    steps:
-      - checkout
-      - run: echo "I was run by API"
+      - run: echo "console.log('complete')" | node
+      - generatelogs
+      - run:
+          name: Check for logs - DO NOT MODIFY
+          command: |
+            if [ ! -f ~/project/log.txt ]; then
+              echo "The log should exist at ~/project/log.txt after running the 'generatelogs' command"
+              exit 1
+            fi
+      - endMission
 
 workflows:
-  normal:
+  build-workflow:
     jobs:
-      - regular
-
-  api-workflow:
-    when: << pipeline.parameters.run_by_api >> # Without modifying the config, run api-job
-    jobs:
-      - api-job
+      - build
