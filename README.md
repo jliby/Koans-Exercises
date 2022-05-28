@@ -23,11 +23,11 @@ We have a `api-job` job in our Workflow. We have decided we only ever want to ru
     <summary>Bonus Spoiler!</summary>
 
     ```shell
-    curl --request POST \
-    --url https://circleci.com/api/v2/project/gh/jliby/Koans-Exercises \
-    --header 'authorization: Basic [NDY5MWNiYjg4OTQyYWRiODVmYTRkZWZlZmI5YjhhMDIwOWNjMzY2NA==]' \
-    --header 'content-type: application/json' \
-    --data '[JSON_DATA]'
+curl --request POST \
+  --url https://circleci.com/api/v2/project/gh/jliby/Koans-Exercises/pipeline \
+  --header 'authorization: Basic [MjE0Y2YyMzllOTlhMjZjNDQ1YzA4YzQ4MTE3MmQ5MTdlYjMzNWFlYg==]' \
+  --header 'content-type: application/json' \
+  --data '{"branch":"Exercise-15","parameters":{"run_by_api":true}}'
     ```
 
   </details>
