@@ -1,5 +1,11 @@
 version: 2.1
 
+
+executors:
+  custom-node:
+    docker:
+      - image: cimg/node
+
 commands:
   generatelogs:
     description: "A command to generate a log file"
@@ -12,11 +18,14 @@ commands:
   endMission:
     description: "Use the parameters of this command to exit this mission with a green build."
     parameters:
+ 
+
       exitCode:
         type: integer
         default: 1
     steps:
       - run: exit <<parameters.exitCode>>
+
 
 jobs:
   build:
@@ -32,6 +41,7 @@ jobs:
               exit 1
             fi
       - endMission
+
 
 workflows:
   build-workflow:
