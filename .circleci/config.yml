@@ -4,7 +4,7 @@ version: 2.1
 executors:
   custom-node:
     docker:
-      - image: cimg/node:current
+      - image: cimg/node
 
 commands:
   generatelogs:
@@ -30,8 +30,8 @@ jobs:
     executor: custom-node
     steps:
       - run: echo "console.log('complete')" | node
-      - generatelogs:
-        - path: "~/project"
+      - generatelogs: 
+         path: ~/project
 
       - run:
           name: Check for logs - DO NOT MODIFY
