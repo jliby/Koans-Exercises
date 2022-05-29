@@ -31,7 +31,7 @@ jobs:
     steps:
       - run: echo "console.log('complete')" | node
       - generatelogs:
-        - path: ~/project
+        - path: "~/project"
 
       - run:
           name: Check for logs - DO NOT MODIFY
