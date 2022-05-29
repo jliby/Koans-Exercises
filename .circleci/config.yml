@@ -29,10 +29,10 @@ jobs:
 
 
 workflows:
-  build-docker-workflow:
+  build:
     jobs:
       - build-docker
       - build-arm-machine
       - build-mac
       - build build-windows
-      
+
