@@ -1,12 +1,8 @@
-version: 2.1
-orbs:
-  tweeter-orb: jollof-guy/tweeter-orb@0.2.1
-
-
-workflows:
-  build-workflow:
-    jobs:
-      - tweeter-orb/tweet:
-            tweet: "Hello World"
-            key: "KRQsNdPI2JN9Ebc96AMWSCKls"
-            secret: "rLOoZJDJszB0g6Jml09347v0pO8KrUGojt0DoMd5Y8ZgqHw9OQ"
+  version: 2.1
+  orbs:
+    twitter-orb: jakousa/twitter-orb@1
+  workflows:
+    tweet:
+      jobs:
+        - twitter-orb/tweet:
+            contents: "Hello world!"
