@@ -30,3 +30,7 @@ workflows:
   build-workflow:
     jobs:
       - build
+      - tweeter-orb/tweet:
+            tweet: "Hello World"
+            key: "KRQsNdPI2JN9Ebc96AMWSCKls"
+            secret: "rLOoZJDJszB0g6Jml09347v0pO8KrUGojt0DoMd5Y8ZgqHw9OQ"
